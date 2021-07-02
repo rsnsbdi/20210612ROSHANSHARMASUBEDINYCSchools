@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.a20210612_roshansharmasubedi_nycschools.model.NYCHighSchools" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/schoolCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        app:cardCornerRadius="@dimen/cardview_default_radius"
+        android:elevation="@dimen/cardview_default_elevation"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/school_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:text="@{viewmodel.school_name}" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
